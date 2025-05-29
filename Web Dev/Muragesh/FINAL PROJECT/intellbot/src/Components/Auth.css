@@ -1,0 +1,245 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: auto;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  overflow: hidden;
+}
+
+/* Main container */
+.auth-container {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+}
+
+/* Quote section styling */
+.auth-quote {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.auth-quote h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.auth-quote p {
+  font-size: 1rem;
+  color: #cfcfcf;
+}
+
+/* Form container styling */
+.auth-form-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Glassmorphism card */
+.auth-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 4px 4px 10px rgba(3, 3, 3, 3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.auth-card p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #d1d1d1;
+}
+
+/* Form elements */
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-card form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-card form input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.auth-card form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.auth-card form button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+/* Toggle text styling */
+.toggle-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #a3a3a3;
+  transition: color 0.3s ease;
+}
+
+.toggle-text:hover {
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 30px 20px;
+  }
+  .auth-quote h2 {
+    font-size: 1.5rem;
+  }
+}
+.mainauth{
+  display: flex;
+}
+.leftauth{
+  width: 70vw;
+  background: linear-gradient(135deg, #0f2027, #203a43, #252f33);
+
+}
+.leftauth {
+  width: 65vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #252f33);
+  color: white;
+  padding: 2rem;
+
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  
+  margin-bottom: 1rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.logo {
+  height: 20vh;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  box-shadow: 4px 4px 10px rgba(0, 0, 3, 0.3);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+
+
+
+.descriptionn{
+  font-size: 1.8rem;
+  max-width: 80%;
+  min-height: 40px;
+}
+
+
+.description {
+  font-size: 1.6rem;
+  height: 2rem;
+
+  position: relative;
+  top: 8rem;
+  overflow: hidden;
+}
+
+.animated-text {
+  display: inline-block;
+  height: 1.5em;
+  overflow: hidden;
+}
+
+.animated-text span {
+  display: block;
+  animation: textSlide 6s linear infinite;
+}
+
+@keyframes textSlide {
+  0%, 25% { transform: translateY(0%); }
+  30%, 50% { transform: translateY(-100%); }
+  55%, 75% { transform: translateY(-200%); }
+  80%, 100% { transform: translateY(-300%); }
+}

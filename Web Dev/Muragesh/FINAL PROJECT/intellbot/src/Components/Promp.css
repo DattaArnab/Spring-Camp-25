@@ -1,0 +1,14 @@
+.apromp{
+    width: 20vw;
+    border: #133438;
+    box-shadow: 4px 4px 10px rgba(06, 06, 06, 06);
+    min-height: 8vh ;
+    height: auto;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 0.7rem
+}
+.apromp:hover{
+    transform: scale(1.1);
+    transition: 1s ;
+}

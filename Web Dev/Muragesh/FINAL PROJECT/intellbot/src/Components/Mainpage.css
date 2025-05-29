@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding & border don't affect width */
+
+}
+
+.mainback {
+    background-color: #133438;
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.lowermain {
+    display: flex;
+    min-height: 85vh;
+    height: auto;
+    gap: 1rem; /* Adds spacing between elements */
+    justify-content: center;
+   
+}
+
+.history, .realapp {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    border-radius: 1rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 1rem;
+    padding: 1rem;
+    
+    
+}
+
+/* Default - Laptop/Desktop */
+.history {
+    width: 25vw;
+   
+
+        height: 85vh;
+        overflow: auto;
+    
+      
+}
+/* Scrollbar width */
+.history::-webkit-scrollbar {
+    width: 10px; /* Adjust width */
+}
+
+/* Scrollbar Track */
+.history::-webkit-scrollbar-track {
+    background: #425b80; /* Light grey */
+    border-radius: 10px;
+}
+
+/* Scrollbar Handle */
+.history::-webkit-scrollbar-thumb {
+    background: #133438; /* Dark grey */
+    border-radius: 10px;
+}
+
+/* Scrollbar Handle on Hover */
+.history::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker grey */
+}
+
+
+.realapp {
+    width: 72vw;
+    height: 85vh;
+        overflow: auto;
+}
+
+/* Medium Screens - Around Laptop (Less than 1100px) */
+@media (max-width: 1100px) {
+    .lowermain {
+        display: flex;
+        flex-direction: column; /* Stacks items */
+        height: auto;
+        align-items: center; /* Center elements */
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .history {
+        width: 90%;
+        height: 30vh;
+    }
+
+    .realapp {
+        width: 90%;
+       min-height: 70vh;
+       height: auto;
+    }
+}
+.inputmain{
+    width: 65vw;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background-color: #133438;
+    border: #133438;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    color: #b5d8f2;
+    font-weight: bold;
+}
+.butinput{
+  height: 2rem;
+  width: 3vw;  
+  margin-left: 0.1rem;
+  background-color: #133438;
+  border: #133438;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0.5, 0.5);
+  color: #b5d8f2;
+    font-weight: bold;
+}
+.butt{
+    height: 2rem;
+
+    margin-left: 0.1rem;
+    background-color: #133438;
+    border: #133438;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0.5, 0.5);
+    color: #b5d8f2;
+      font-weight: bold;
+      margin-top: 1rem;
+}
+.newchat{
+    height: 2rem;
+  width: 3vw;  
+  margin-left: 0.1rem;
+  background-color: #133438;
+  border: #133438;
+  box-shadow: 4px 4px 10px rgba(0.5, 0.5, 0.5, 0.5);
+  color: #b5d8f2;
+    font-weight: bold;
+    position: relative;
+    left: 14vw;
+}
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 5px;
+    align-self: flex-start;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background-color: #555;
+    border-radius: 50%;
+    animation: typing 1.5s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+.fileadd{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.file-upload {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+}
+
+.fileadd {
+    position: absolute;
+ 
+   height: 7vh;
+    opacity: 0;
+    cursor: pointer;
+    width: 30vw;
+    margin-right: auto;
+}
+
+.file-label {
+    display: block;
+    background-color: #133438;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 30vw;
+    margin-right: auto;
+
+}
+
+.file-label:hover {
+    background-color: #176b73;
+}
+
+.file-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}

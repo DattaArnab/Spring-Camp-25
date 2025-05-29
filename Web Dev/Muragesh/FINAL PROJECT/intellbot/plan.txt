@@ -1,0 +1,33 @@
+13-02-25
+1)prompt saving
+2)one session like remembering the conversation ,and frontend should be like chat gpt[adding a tab to start new chat]
+14-02-25
+3)adding voice
+15-02-25
+4)about
+5)thinking in future
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const identify = async () => {
+  try {
+    const response = await fetch("http://localhost:8080/all", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body:JSON.stringify({
+        token:"need to add token"
+      })
+    });
+const data = await response.json();
+Setmail(data)
+  
+  
+  } catch (error) {
+    console.error("Error:", error.message);
+  }
+};
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+1)jwt using cookies
+2)hasing password in frontend
+
